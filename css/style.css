@@ -1,0 +1,123 @@
+* {
+    padding: 0 ;
+    margin: 0;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-family: sans-serif;
+}
+body {
+    background: linear-gradient(#111,#222) no-repeat;
+    height: 100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before {
+    content   : '';
+    background: red ;
+    width     : 100%;
+    height    : 100%;
+    position  : absolute ;
+    z-index   : -1  ;
+    clip-path: circle(50% at right 85%);
+}
+.box {
+    background: rgba(255, 255, 255, 0.158) ;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 80%;
+    height: 80vh;
+    border-radius: 19px;
+}
+.box header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2vh;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.box header .logo {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: 0.6s ease;
+}
+.box header nav a {
+    margin-right: 20px;
+    transition: 0.6s ease;
+}
+.box header .logo:hover,.box header nav a:hover {
+    color: red;
+}
+.Adidas {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+.Adidas .text {
+    width: 20rem;
+}
+.Adidas .text h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.Adidas .text p {
+    color: #ffffffc5;
+    margin-top: 20px;
+}
+.Adidas img {
+    width: 40%;
+}
+@media (max-width:900px) {
+    .Adidas {
+        display: block;
+        text-align: center;
+    }
+    .Adidas .text {
+        width: 100%; 
+        padding-bottom: 60px;
+    }
+    .Adidas img {
+        width: 60%;
+    }
+}
+@media (max-width:650px) {
+    .Adidas {
+        margin-top: 2rem;
+    }
+    .box header {
+        display: block;
+        text-align: center;
+    }
+    body::before {
+        clip-path: circle(45% at bottom);
+    }
+    .Adidas img {
+        width: 60%;
+    }
+}
+@media (max-width:240px) {
+    .box header .logo {
+        font-size: 1.5rem;
+    }
+    .Adidas .text {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .Adidas .text h2 {
+        font-size: 1.3rem;
+    }
+    .Adidas .text p {
+        font-size: 0.8rem;
+    }
+    .Adidas img {
+        width: 100%;
+    }
+}
